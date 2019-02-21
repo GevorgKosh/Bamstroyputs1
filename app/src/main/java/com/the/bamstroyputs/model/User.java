@@ -5,23 +5,45 @@ import android.databinding.Bindable;
 import com.the.bamstroyputs.BR;
 
 public class User extends BaseObservable {
+    private String id;
+    private String username;
     private String name;
     private String email;
     private String password;
+    private String active;
     private String token;
-    private String company;
     private String phone_number;
 
     public User() {
     }
 
-    public User(String name, String email, String password, String token, String company, String phone_number) {
+    public User(String username, String name, String email, String password, String active, String phone_number) {
+        this.username = username;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.token = token;
-        this.company = company;
+        this.active = active;
         this.phone_number = phone_number;
+    }
+
+    @Bindable
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+        notifyPropertyChanged(BR.username);
+    }
+
+    @Bindable
+    public String getActive() {
+        return active;
+    }
+
+    public void setActive(String active) {
+        this.active = active;
+        notifyPropertyChanged(BR.active);
     }
 
     @Bindable
@@ -65,16 +87,6 @@ public class User extends BaseObservable {
     }
 
     @Bindable
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-        notifyPropertyChanged(BR.company);
-    }
-
-    @Bindable
     public String getPhone_number() {
         return phone_number;
     }
@@ -82,5 +94,16 @@ public class User extends BaseObservable {
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
         notifyPropertyChanged(BR.phone_number);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", token='" + token + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                '}';
     }
 }

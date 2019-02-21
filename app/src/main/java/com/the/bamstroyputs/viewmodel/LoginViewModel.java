@@ -9,6 +9,8 @@ import android.util.Log;
 
 import com.the.bamstroyputs.HomeActivity;
 import com.the.bamstroyputs.controller.DataController;
+import com.the.bamstroyputs.model.Data;
+import com.the.bamstroyputs.model.ResponseModel;
 import com.the.bamstroyputs.model.User;
 import com.the.bamstroyputs.networking.BamsClient;
 import com.the.bamstroyputs.networking.BamsService;
@@ -32,24 +34,21 @@ public class LoginViewModel extends AndroidViewModel {
 
     public void loginRequest(String email, String password){
         service = BamsClient.getClient().create(BamsService.class);
-        service.logIn(email, password).enqueue(new Callback<User>() {
+        service.logIn(email, password).enqueue(new Callback<ResponseModel<Data>>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
+            public void onResponse(Call<ResponseModel<Data>> call, Response<ResponseModel<Data>> response) {
                 if(response.isSuccessful()){
-                    User user = response.body();
+                    User user = response.body().getData().getUser();
                     userMutableLiveData.setValue(user);
-                    Log.d("RESPONSE", response.toString());
+                    Log.d("RESPONSE", response.toString() + " " + response.body().toString());
                 }else {
                     Log.d("RESPONSE", "RES " + response.toString() + " NO SUCCESS");
-
                 }
-
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
+            public void onFailure(Call<ResponseModel<Data>> call, Throwable t) {
                 Log.d("RESPONSE", t.getMessage() + "FAILURE");
-
             }
         });
     }
