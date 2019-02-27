@@ -2,7 +2,6 @@ package com.the.bamstroyputs;
 
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -12,10 +11,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.the.bamstroyputs.controller.DataController;
 import com.the.bamstroyputs.databinding.FragmentLoginBinding;
 import com.the.bamstroyputs.model.User;
+import com.the.bamstroyputs.util.ActivityUtil;
+import com.the.bamstroyputs.util.Utils;
 import com.the.bamstroyputs.viewmodel.LoginViewModel;
 
 
@@ -61,11 +63,28 @@ public class LoginFragment extends Fragment {
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (!Utils.allowToLogin(getContext(), binding.email.getText().toString(), binding.password.getText().toString(),
+                        getResources().getString(R.string.empty_fields))) {
+                    return;
+                }
+
+                if (!Utils.isValidEmail(binding.email.getText().toString())) {
+                    Toast.makeText(getContext(), getResources().getString(R.string.wrong_email_format), Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 viewModel.loginRequest(binding.email.getText().toString(), binding.password.getText().toString());
+            }
+        });
+
+        binding.forgetPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityUtil.pushFragment(ForgetPasswordFragment.newInstance(), getFragmentManager(), R.id.fragment, true);
             }
         });
 
         return view;
     }
+
 
 }

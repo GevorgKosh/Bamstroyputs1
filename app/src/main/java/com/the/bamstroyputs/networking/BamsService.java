@@ -16,4 +16,15 @@ public interface BamsService {
     @POST("auth/SignIn")
     Call<ResponseModel<Data>> logIn(@Field("email") String email,
                                     @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("auth/ForgotPassword")
+    Call<ResponseModel> sendEmail(@Field("email") String email);
+
+
+    @FormUrlEncoded
+    @POST("manager/GetProjects")
+    Call<ResponseModel> getProjects(@Field("token") String token,
+                       @Field("page") String page,
+                       @Field("per_page") String per_page);
 }

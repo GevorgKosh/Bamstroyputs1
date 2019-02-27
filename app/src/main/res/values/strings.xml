@@ -1,10 +1,20 @@
 <resources>
     <string name="app_name">Bamstroyputs</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email">Эл. аддресс</string>
     <string name="password">Пароль</string>
-    <string name="forget_password">Забыли пароль</string>
+    <string name="forget_password">Забыли пароль?</string>
     <string name="enter">Войти</string>
+    <string name="wrong_email_format">Неверный формат электронной почты</string>
+    <string name="wrong_email">Неверное почта</string>
+    <string name="empty_fields">Заполните все поля</string>
+    <string name="wrong_email_pass">Неверное почта или пароль </string>
+    <string name="enter_email">Пожалуйста, введите свой адрес электронной почты</string>
+    <string name="send">Отправить</string>
+    <string name="get_email">Новый пароль был отправлен на ваш электронный адрес</string>
+    <string name="general">Главный</string>
+    <string name="vendors">Поставщики</string>
+    <string name="profile">Профиль</string>
+    <string name="empty_project">Вы еще не создали проект. Нажмите на кнопку плюс, чтобы создать новый проект</string>
 </resources>

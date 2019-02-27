@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.the.bamstroyputs.controller.DataController;
+import com.the.bamstroyputs.util.ActivityUtil;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -13,6 +14,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Log.d("MY_INFO", DataController.getInstance().getUser().toString());
+        ActivityUtil.pushFragment(GeneralFragment.newInstance(), getSupportFragmentManager(), R.id.container, false);
     }
 }

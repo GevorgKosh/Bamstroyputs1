@@ -5,4 +5,9 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="colorOrange">#F1BC12</color>
+    <color name="colorLightBlue">#a3b6cb</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorBlueBackground">#00538d</color>
+    <color name="blueTextColor">#180d5b</color>
+    <color name="colorLighteeBackground">#F2F6FF</color>
 </resources>

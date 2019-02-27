@@ -6,8 +6,10 @@ import android.arch.lifecycle.MutableLiveData;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.the.bamstroyputs.HomeActivity;
+import com.the.bamstroyputs.R;
 import com.the.bamstroyputs.controller.DataController;
 import com.the.bamstroyputs.model.Data;
 import com.the.bamstroyputs.model.ResponseModel;
@@ -40,9 +42,8 @@ public class LoginViewModel extends AndroidViewModel {
                 if(response.isSuccessful()){
                     User user = response.body().getData().getUser();
                     userMutableLiveData.setValue(user);
-                    Log.d("RESPONSE", response.toString() + " " + response.body().toString());
                 }else {
-                    Log.d("RESPONSE", "RES " + response.toString() + " NO SUCCESS");
+                    Toast.makeText(getApplication(), getApplication().getResources().getString(R.string.wrong_email_pass), Toast.LENGTH_SHORT).show();
                 }
             }
 
