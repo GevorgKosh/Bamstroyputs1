@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog">
+
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/create_building"
+        android:textColor="@color/blueTextColor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edProjectName2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/colorLightBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/colorLightBlue"
+            android:textColorHint="@color/colorLightBlue" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/light_button"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/cancel"
+        android:textColor="@color/blueTextColor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnCreate"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/edProjectName2"
+        app:layout_constraintTop_toBottomOf="@+id/edProjectCount" />
+
+    <TextView
+        android:id="@+id/btnCreate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/orange_button"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/create"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edProjectName2"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintTop_toTopOf="@+id/btnCancel" />
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edProjectCount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeColor="@color/colorLightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/edProjectName2"
+        app:layout_constraintStart_toStartOf="@+id/edProjectName2"
+        app:layout_constraintTop_toBottomOf="@+id/edProjectName2">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/colorLightBlue"
+            android:textColorHint="@color/colorLightBlue" />
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>

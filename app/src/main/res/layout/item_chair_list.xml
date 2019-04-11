@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_back_with_radius">
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_chair" />
+
+            <TextView
+                android:id="@+id/chairName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chair 1106"
+                android:textColor="@color/colorBlueBackground"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="168dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/chairName" />
+
+            <TextView
+                android:id="@+id/weHave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Есть"
+                android:textColor="@color/colorBlueBackground"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:layout_editor_absoluteX="181dp" />
+
+            <TextView
+                android:id="@+id/txtCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="86dp"
+                android:layout_marginTop="16dp"
+                android:text="Осталось"
+                android:textColor="@color/colorBlueBackground"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/weHave"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/txtOrdered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="16dp"
+                android:text="Заказали"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlueBackground"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/txtCount"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+                android:id="@+id/numHave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:text="10"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlueBackground"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/weHave"
+                app:layout_constraintStart_toStartOf="@+id/weHave"
+                app:layout_constraintTop_toBottomOf="@+id/weHave" />
+
+            <TextView
+                android:id="@+id/numCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/redTextColor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtCount"
+                app:layout_constraintStart_toStartOf="@+id/txtCount"
+                app:layout_constraintTop_toBottomOf="@+id/txtCount" />
+
+            <TextView
+                android:id="@+id/numOrdered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlueBackground"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtOrdered"
+                app:layout_constraintStart_toStartOf="@+id/txtOrdered"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrdered" />
+
+            <ImageView
+                android:id="@+id/menu_chair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_menu" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

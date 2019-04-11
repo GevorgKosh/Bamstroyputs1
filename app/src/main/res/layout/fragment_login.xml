@@ -13,8 +13,7 @@
         android:background="@drawable/background_cube"
         android:clickable="true"
         android:focusable="true"
-        tools:context=".LoginFragment">
-
+        tools:context=".authentication.login.LoginFragment">
 
         <ImageView
             android:id="@+id/imageView"
@@ -50,9 +49,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/colorLightBlue"
-                android:textColorHint="@color/colorLightBlue"
-                android:inputType="textEmailAddress" />
+                android:textColorHint="@color/colorLightBlue" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -74,10 +73,10 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorLightBlue"
-                android:textColorHint="@color/colorLightBlue"
                 android:hint="@string/password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/colorLightBlue"
+                android:textColorHint="@color/colorLightBlue" />
         </android.support.design.widget.TextInputLayout>
 
         <TextView
@@ -85,8 +84,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="20sp"
             android:text="@string/forget_password"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
@@ -100,10 +99,16 @@
             android:paddingTop="10dp"
             android:paddingRight="40dp"
             android:paddingBottom="10dp"
-            android:textSize="30sp"
             android:text="@string/enter"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/forgetPass" />
+
+        <com.the.bamstroyputs.loader.Loader
+            android:id="@+id/loader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
     </android.support.constraint.ConstraintLayout>
 </layout>

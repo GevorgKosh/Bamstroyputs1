@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data></data>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backEditProfile"
+    tools:context=".view.fragment.ChangeChairFragment">
+
+
+    <EditText
+        android:id="@+id/txtCount"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:hint="@string/count"
+        android:paddingLeft="25dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/blueTextColor"
+        android:background="@drawable/et_back_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNumber"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/et_back_white"
+        android:hint="Накладной Номер"
+        android:paddingLeft="25dp"
+        android:textColor="@color/blueTextColor"
+        android:textColorHint="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWhere" />
+
+
+    <EditText
+        android:id="@+id/txtWhere"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:hint="@string/to_where"
+        android:paddingLeft="25dp"
+        android:textColorHint="@color/textColor"
+        android:textColor="@color/textColor"
+        android:background="@drawable/et_back_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCount" />
+
+    <EditText
+        android:id="@+id/txtComment"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/et_back_white"
+        android:hint="@string/comment"
+        android:paddingLeft="20dp"
+        android:textColorHint="@color/textColor"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="482dp"
+        android:layout_marginRight="482dp"
+        android:text="CheckBox"
+        android:textColor="@color/textColor"
+        android:textColorLink="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtComment"
+        tools:text="Временно" />
+
+    <EditText
+        android:id="@+id/dateAt"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/et_back_white"
+        android:ems="10"
+        android:hint="От"
+        android:inputType="date"
+        android:paddingLeft="24dp"
+        android:textColorHint="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtComment" />
+
+    <EditText
+        android:id="@+id/dateTo"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/et_back_white"
+        android:ems="10"
+        android:hint="До"
+        android:inputType="date"
+        android:paddingLeft="24dp"
+        android:textColorHint="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/dateAt"
+        app:layout_constraintTop_toBottomOf="@+id/txtComment" />
+
+    <Button
+        android:id="@+id/btnReplace"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/btn_yellow"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/replace" />
+
+</android.support.constraint.ConstraintLayout>
+</layout>

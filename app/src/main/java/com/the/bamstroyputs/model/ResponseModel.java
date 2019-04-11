@@ -10,7 +10,7 @@ public class ResponseModel<E> {
 
     @SerializedName("errors")
     @Expose
-    private String errors[];
+    private String errors;
 
     @SerializedName("data")
     @Expose
@@ -24,11 +24,11 @@ public class ResponseModel<E> {
         this.status = status;
     }
 
-    public String[] getErrors() {
+    public String getErrors() {
         return errors;
     }
 
-    public void setErrors(String[] errors) {
+    public void setErrors(String errors) {
         this.errors = errors;
     }
 

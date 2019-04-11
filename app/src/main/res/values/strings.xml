@@ -17,4 +17,47 @@
     <string name="vendors">Поставщики</string>
     <string name="profile">Профиль</string>
     <string name="empty_project">Вы еще не создали проект. Нажмите на кнопку плюс, чтобы создать новый проект</string>
+    <string name="something_wrong">Извините, что-то пошло не так</string>
+    <string name="create_project">Создать проект</string>
+    <string name="create_building">Создать здание</string>
+    <string name="create_floor">Создать Этаж</string>
+    <string name="create_room">Создать комнато</string>
+    <string name="successful_new_project">Новый проект был успешно создан</string>
+    <string name="successful_new_building">Новый здание был успешно создано</string>
+    <string name="successful_new_floor">Новый этаж был успешно создан</string>
+    <string name="successful_new_room">Новая комната была успешно создано</string>
+    <string name="project_name">Название проекта</string>
+    <string name="building_name">Название здание</string>
+    <string name="room_name">Название комнаты</string>
+    <string name="floor_count">Количество этажей</string>
+    <string name="concret_floor">Этаж %d</string>
+    <string name="room_count">Количество комнат</string>
+    <string name="room_number">Номер комнаты</string>
+    <string name="show_orders_images">Показать изображения заказов</string>
+    <string name="orders">%d заказ</string>
+    <string name="current">Есть </string>
+    <string name="remainder">Осталось</string>
+    <string name="order">Заказал</string>
+    <string name="cancel">Отменить</string>
+    <string name="create">Создать</string>
+
+    <string name="name">Имя</string>
+    <string name="privateInfo">ЛИЧНАЯ ИНФОРМАЦИЯ</string>
+    <string name="phone_number">Номер Телефона</string>
+    <string name="change_pass">Изменить пароль</string>
+    <string name="now_password">Текущий пароль</string>
+    <string name="new_pass">Новый пароль</string>
+    <string name="confirm_new_pass">Подвердите новый пароль</string>
+    <string name="update_info">Обновить информацию</string>
+    <string name="count">Каличество</string>
+    <string name="comment">Комментария</string>
+    <string name="to_where">Куда</string>
+    <string name="replace">Заменить</string>
+    <string name="hideOrderIcon">Показывать изображение заказов</string>
+    <string name="sellerName">Имя продовца</string>
+    <string name="weHave">Есть</string>
+    <string name="chooseFur">Выберите Мебель</string>
+    <string name="chooseCount">Выберите Количество</string>
+
+
 </resources>

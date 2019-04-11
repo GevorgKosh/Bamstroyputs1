@@ -2,12 +2,25 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#F1BC12</color>
 
+    <color name="colorBlack">#000000</color>
     <color name="colorOrange">#F1BC12</color>
     <color name="colorLightBlue">#a3b6cb</color>
     <color name="colorWhite">#fff</color>
     <color name="colorBlueBackground">#00538d</color>
-    <color name="blueTextColor">#180d5b</color>
+    <color name="blueTextColor">#180D5B</color>
     <color name="colorLighteeBackground">#F2F6FF</color>
+    <color name="colorDarkRed">#D71414</color>
+
+
+    <color name="textColor">#C8C7D1</color>
+    <color name="backEditProfile">#eef2fc</color>
+    <color name="textColorEditProfile">#160c53</color>
+    <color name="white">#FFF</color>cacbdf
+    <color name="redTextColor">#d71414</color>
+    <color name="lightTextColor">#7393b4</color>
+    <color name="viewColor">#DBDFEB</color>
+
+
 </resources>

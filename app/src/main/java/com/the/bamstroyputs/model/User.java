@@ -13,6 +13,7 @@ public class User extends BaseObservable {
     private String active;
     private String token;
     private String phone_number;
+    private String type;
 
     public User() {
     }
@@ -24,6 +25,17 @@ public class User extends BaseObservable {
         this.password = password;
         this.active = active;
         this.phone_number = phone_number;
+    }
+
+    public User(String username, String name, String email, String password, String active, String token, String phone_number, String type) {
+        this.username = username;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.active = active;
+        this.token = token;
+        this.phone_number = phone_number;
+        this.type = type;
     }
 
     @Bindable
@@ -96,14 +108,28 @@ public class User extends BaseObservable {
         notifyPropertyChanged(BR.phone_number);
     }
 
+    @Bindable
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+        notifyPropertyChanged(BR.type);
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", active='" + active + '\'' +
                 ", token='" + token + '\'' +
                 ", phone_number='" + phone_number + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }
