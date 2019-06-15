@@ -4,6 +4,7 @@ import com.the.bamstroyputs.model.Building;
 import com.the.bamstroyputs.model.Floor;
 import com.the.bamstroyputs.model.Order;
 import com.the.bamstroyputs.model.Project;
+import com.the.bamstroyputs.model.ProjectEditResponse;
 import com.the.bamstroyputs.model.ResponseModel;
 import com.the.bamstroyputs.model.Room;
 import com.the.bamstroyputs.model.User;
@@ -38,6 +39,12 @@ public interface BamsService {
                                                @Field("name") String name);
 
     @FormUrlEncoded
+    @POST("manager/EditProject")
+    Call<ResponseModel<ProjectEditResponse>> changeProjectName(@Field("token") String token,
+                                                               @Field("name") String name,
+                                                               @Field("project_id") String project_id);
+
+    @FormUrlEncoded
     @POST("manager/GetBuildings")
     Call<ResponseModel<List<Building>>> getBuildings(@Field("token") String token,
                                                      @Field("page") String page,
@@ -50,6 +57,14 @@ public interface BamsService {
                                                  @Field("name") String name,
                                                  @Field("naumber_of_foolrs") String numberFloors,
                                                  @Field("project_id") String project_id);
+
+    @FormUrlEncoded
+    @POST("manager/EditBuilding")
+    Call<ResponseModel> changeBuildingNameFloorNumbers(@Field("token") String token,
+                                                   @Field("naumber_of_foolrs") String numberOfFloors,
+                                                   @Field("project_id") String project_id,
+                                                   @Field("building_id") String building_id,
+                                                   @Field("name") String name);
 
     @FormUrlEncoded
     @POST("manager/GetFloors")

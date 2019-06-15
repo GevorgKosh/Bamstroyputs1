@@ -86,4 +86,24 @@ public class LoginFragment extends Fragment {
         super.onDestroy();
         viewModel.getUserMutableLiveData().removeObservers(this);
     }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(isVisibleToUser && isResumed()){
+            binding.email.setText("");
+            binding.password.setText("");
+            Toast.makeText(getActivity(), "I`m back", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(getActivity(), "I`m back not", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    //    @Override
+//    public boolean getUserVisibleHint() {
+//        binding.email.setText("");
+//        binding.password.setText("");
+//        Toast.makeText(getActivity(), "I`m back", Toast.LENGTH_SHORT).show();
+//        return super.getUserVisibleHint();
+//    }
 }

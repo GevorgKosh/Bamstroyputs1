@@ -26,6 +26,7 @@
     <string name="successful_new_building">Новый здание был успешно создано</string>
     <string name="successful_new_floor">Новый этаж был успешно создан</string>
     <string name="successful_new_room">Новая комната была успешно создано</string>
+    <string name="projects">Проекты</string>
     <string name="project_name">Название проекта</string>
     <string name="building_name">Название здание</string>
     <string name="room_name">Название комнаты</string>
@@ -58,6 +59,13 @@
     <string name="weHave">Есть</string>
     <string name="chooseFur">Выберите Мебель</string>
     <string name="chooseCount">Выберите Количество</string>
+    <string name="change">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="rename">Переименовать</string>
+    <string name="addNick">Добавить ник</string>
+    <string name="new_name">Новое имя</string>
+    <string name="project_name_successfull_change">Название проекта было успешно изменено</string>
+    <string name="building_data_successfull_change">Новые данные здания были успешно изменены</string>
 
 
 </resources>

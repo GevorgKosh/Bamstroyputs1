@@ -28,8 +28,6 @@ public class HomeActivity extends AppCompatActivity {
 
         ActivityUtil.pushFragment(ProjectFragment.newInstance(), getSupportFragmentManager(), R.id.container, false);
 
-
-        Log.d("TAKEIT", DataController.getInstance().getUser().toString());
         binding.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -54,9 +52,13 @@ public class HomeActivity extends AppCompatActivity {
         binding.toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                binding.drawer.openDrawer(GravityCompat.START);
             }
         });
+    }
+
+    public void setToolbarTitle(String toolbarTitle){
+        binding.barTitle.setText(toolbarTitle);
     }
 
     private void closeMenu() {
